@@ -17,6 +17,7 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
   height: auto;
 }
 </style>
+<script defer src="script.js"></script>
 <body>
 
 <!-- Links (sit on top) -->
@@ -101,18 +102,18 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
     <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Gästbok</span>
   </div>
 
-  <form class="w3-container" action="/action_page.php" target="_blank">
+  <form class="w3-container" id="myForm">
     <div class="w3-section">
-      <label>Name</label>
-      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required>
+      <label>Namn</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="name" required>
     </div>
     <div class="w3-section">
-      <label>Email</label>
-      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Email" required>
+      <label>E-post</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="email" required>
     </div>
     <div class="w3-section">
-      <label>Message</label>
-      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
+      <label>Meddelande</label>
+      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="message" required>
     </div>
     <button type="submit" class="w3-button w3-block w3-black">Send</button>
   </form>
