@@ -24,11 +24,7 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-row w3-large w3-light-grey">
     <div class="w3-col s3">
-      <a href="#" class="w3-button w3-block">Hem</a>
-    </div>
-
-    <div class="w3-col s3">
-      <a href="#about" class="w3-button w3-block">Om Nihil</a>
+      <a href="#" class="w3-button w3-block">Om Nihil</a>
     </div>
 
     <div class="w3-col s3">
@@ -45,7 +41,8 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
     <h1><img src="logo_highres_xmas.png" class="logoimg"></h1>
 </div>
     <div class="w3-panel">
-    <p>Reser sig igen, likt fågeln Fenix.</p>
+      <p>Nihil is back! Vår kära webbserver är uppe igen efter en paus sedan Januari 2004. Denna website är en hyllning till allt roligt geekande när det begav sig. Servern är idag inget beige miditower, utan en <a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pie 4</a>, där den hostar diverse hobbyprojekt. Se mer på <a href="https://github.com/johan-new/">https://github.com/johan-new/</a></p>
+    <p>Denna gång agerar Nihil värd för diverse hobbyprojekt i mitt hemmalabb. Den första är en liten gästboktjänst som du kan pröva under <a href="#contact">Gästbok</a></p>
   </div>
 
   <!-- Slideshow -->
@@ -84,19 +81,6 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
   </div>
   
 
-  <!-- Grid -->
-  <div class="w3-row-padding" id="about">
-    <div class="w3-center w3-padding-64">
-      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Om Nihil</span>
-    </div>
-      <div class="w3-panel">
-    	<p>Nihil is back! Vår kära webbserver är uppe igen efter en paus sedan Januari 2004. Denna website är en hyllning till allt roligt geekande när det begav sig. Servern är idag inget beige miditower, utan en <a href="https://www.raspberrypi.org/products/raspberry-pi-4-model-b/">Raspberry Pie 4</a>, där den hostar diverse hobbyprojekt. Se mer på <a href="https://github.com/johan-new/">https://github.com/johan-new/</a></p>
- 	 </div>  
-  </div>
-
-
-
-
   <!-- Contact -->
   <div class="w3-center w3-padding-64" id="contact">
     <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Gästbok</span>
@@ -108,31 +92,21 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
       <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="name" required>
     </div>
     <div class="w3-section">
-      <label>E-post</label>
-      <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="email" required>
-    </div>
-    <div class="w3-section">
       <label>Meddelande</label>
       <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="message" required>
     </div>
     <button type="submit" class="w3-button w3-block w3-black">Send</button>
   </form>
 
+  <div class="w3-panel" id="guestbookContent">
+  </div>
+
 </div>
 
 <!-- Footer -->
 
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-  <h4>Footer</h4>
-  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
+  <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>Till toppen</a>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
 

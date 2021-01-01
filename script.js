@@ -1,22 +1,30 @@
+const endpointURL = "http://localhost:8080/guestbook";
+
 window.addEventListener('load', ()=>{
     const form = document.getElementById( "myForm" );
+    
+    showNewMessages();
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
         postMessage();
-        let updatedMessages = getMessages();
-        alert(updatedMessages);
+        
     });
+
+    function showNewMessages(){
+        getMessages().then(setGuestBookContent);
+    }
 
     function postMessage(){
         const XHR = new XMLHttpRequest;
         const formdt = new FormData(form);
 
-        XHR.open("POST","http://localhost:8080/guestbook");
+        XHR.open("POST",endpointURL);
         XHR.send(formdt);
 
         XHR.addEventListener("load",function(event) {
             alert("Meddelande skickat!")
+            showNewMessages();
         });
         XHR.addEventListener("error",function(event) {
             alert("Ett fel har uppstått!")
@@ -24,7 +32,6 @@ window.addEventListener('load', ()=>{
     }
 
     async function getMessages(){
-        let endpointURL = "http://localhost:8080/guestbook";
 
         try {
             let resp = await fetch(endpointURL);
@@ -32,12 +39,27 @@ window.addEventListener('load', ()=>{
 
             if (resp.ok){
                 messages = await resp.json();
-                console.log(messages);
                 return messages;
             }
         } catch (error) {
             alert(error);
         }
     }
+
+    function setGuestBookContent(messages) {
+        let contentDiv = document.getElementById('guestbookContent');
+
+        //clearing DIV-element
+        contentDiv.innerHTML = ""
+
+        //rendering new list
+        messages.forEach((somePost,index) => {
+            let newPElement = document.createElement('p');
+            let newLine = `<b>Namn:</b> ${somePost.name} <br /> <b>Meddelande:</b> ${somePost.message} <br /> <b>Skickat:</b> ${somePost.timestamp} <br /> <i>${somePost.response}</i>`
+            newPElement.innerHTML = newLine
+            contentDiv.appendChild(newPElement)
+        });
+    }
+
 
 })
