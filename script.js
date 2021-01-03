@@ -1,4 +1,4 @@
-const endpointURL = "http://localhost:8080/guestbook";
+const endpointURL = "http://nihil.roburterra.net:8081/guestbook";
 
 window.addEventListener('load', ()=>{
     const form = document.getElementById( "myForm" );
@@ -12,7 +12,10 @@ window.addEventListener('load', ()=>{
     });
 
     function showNewMessages(){
-        getMessages().then(setGuestBookContent);
+        try {
+            getMessages().then(setGuestBookContent);
+        } catch (silent) {}
+    
     }
 
     function postMessage(){
