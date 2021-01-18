@@ -1,4 +1,4 @@
-const endpointURL = "http://nihil.roburterra.net:8081/guestbook";
+const endpointURL = "http://nihil.roburterra.net/guestbook";
 
 window.addEventListener('load', ()=>{
     const form = document.getElementById( "myForm" );
